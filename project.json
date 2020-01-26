@@ -14078,6 +14078,30 @@
 		},
 		"/GalaxyFighters.pop": {
 			"sdcard": false
+		},
+		"/Banner and Icons/Screenshots_01.h": {
+			"sdcard": false
+		},
+		"/Banner and Icons/Screenshots_05.h": {
+			"sdcard": false
+		},
+		"/Banner and Icons/Screenshots_07.h": {
+			"sdcard": false
+		},
+		"/Banner and Icons/Screenshots_06.h": {
+			"sdcard": false
+		},
+		"/Banner and Icons/Screenshots_03.h": {
+			"sdcard": false
+		},
+		"/Banner and Icons/Screenshots_04.h": {
+			"sdcard": false
+		},
+		"/Banner and Icons/Screenshots_02.h": {
+			"sdcard": false
+		},
+		"/music/galaxyA0.raw": {
+			"sdcard": false
 		}
 	}
 }
