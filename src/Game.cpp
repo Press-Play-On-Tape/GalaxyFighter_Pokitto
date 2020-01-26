@@ -25,7 +25,7 @@ using PC = Pokitto::Core;
 using PD = Pokitto::Display;
 
 
-void Game::setup(GameCookie &cookie) {
+void Game::setup(GameCookie *cookie) {
 
 	this->currentState = GameStateType::SplashScreen_Activate; 
 	this->splashScreenState.activate();

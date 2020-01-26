@@ -142,20 +142,28 @@ namespace Formations {
 
     const LevelData level_Test[] = {
         
-        { LevelType::SetFormation, 0, Formations::FORMATION_08, false, 0 },
+        { LevelType::SetFormation, 0, Formations::TEST_00, false, 0 },
 
-        { LevelType::LaunchSequence, 10, SEQUENCE_13_IDX, false, 0 },
-        { LevelType::LaunchSequence, 19, SEQUENCE_13_IDX, false, 8 },
+//        { LevelType::LaunchSequence, 10, SEQUENCE_01_IDX, false, 0 },
+//        { LevelType::LaunchSequence, 19, SEQUENCE_13_IDX, false, 8 },
 
 
 
         { LevelType::StartPulse, 0, 0, false, 0 },
         { LevelType::RepeatStart, 0, 0, false, 0 },
 
-        #include "levels/includes/Tractor_Init_00.h"   
+//        #include "levels/includes/Tractor_Init_00.h"   
         
-        { LevelType::LaunchSequence_Rand_1, BOSS_ENEMY_ONLY | RHS_ENEMY_POS, ATTACK_04_IDX, false, 0 },
-        { LevelType::DelayUntilAllFinished, 0, 10, false, 0 },
+        { LevelType::LaunchSequence, 5, ATTACK_00_IDX, false, 0 },
+        { LevelType::DelayUntilAllFinished, 0, 0, false, 0 },
+        { LevelType::LaunchSequence, 5, ATTACK_01_IDX, false, 0 },
+        { LevelType::DelayUntilAllFinished, 0, 0, false, 0 },
+        { LevelType::LaunchSequence, 5, ATTACK_02_IDX, false, 0 },
+        { LevelType::DelayUntilAllFinished, 0, 0, false, 0 },
+        { LevelType::LaunchSequence, 5, ATTACK_03_IDX, false, 0 },
+        { LevelType::DelayUntilAllFinished, 0, 0, false, 0 },
+        { LevelType::LaunchSequence, 5, ATTACK_04_IDX, false, 0 },
+        { LevelType::DelayUntilAllFinished, 0, 0, false, 0 },
 
         { LevelType::RepeatEnd, 0, 0, false, 0 },
         { LevelType::End, 0, 0, false, 0 },

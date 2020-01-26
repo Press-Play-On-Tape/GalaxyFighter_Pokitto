@@ -16,8 +16,8 @@ class HighScoreState : public BaseState {
   public:	
   
     void activate();
-    GameStateType update(GameStateType currentState, GameCookie &cookie);
-    void render(GameCookie &cookie);
+    GameStateType update(GameStateType currentState, GameCookie *cookie);
+    void render(GameCookie *cookie);
 
 };
 

@@ -37,7 +37,7 @@ class PlayGameState : public BaseState {
 	public:
 
 		void activate();
-		GameStateType update(GameStateType currentState, GameCookie &cookie);
+		GameStateType update(GameStateType currentState, GameCookie *cookie);
 		void render();
 
 	private:

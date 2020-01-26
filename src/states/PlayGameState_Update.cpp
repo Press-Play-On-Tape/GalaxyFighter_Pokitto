@@ -20,7 +20,7 @@ using PS = Pokitto::Sound;
 // ----------------------------------------------------------------------------
 //  Handle state updates .. 
 //
-GameStateType PlayGameState::update(GameStateType currentState, GameCookie &cookie) { 
+GameStateType PlayGameState::update(GameStateType currentState, GameCookie *cookie) { 
  
 
     // Update star field ..
@@ -190,7 +190,7 @@ GameStateType PlayGameState::update(GameStateType currentState, GameCookie &cook
                 if (Utils::getFrameCount(4) == 0) this->player.decelerate();
                 if (this->counter < LEVEL_DELAY - 20 && (PC::buttons.pressed(BTN_A) || PC::buttons.pressed(BTN_B))) {
 
-                    uint32_t index = cookie.setLastScore(this->score);
+                    uint32_t index = cookie->setLastScore(this->score);
 
                     if (index == 0) {
 
@@ -221,7 +221,7 @@ GameStateType PlayGameState::update(GameStateType currentState, GameCookie &cook
             }
             else {
 
-                uint32_t index = cookie.setLastScore(this->score);
+                uint32_t index = cookie->setLastScore(this->score);
 
                 if (index < 5) {
 

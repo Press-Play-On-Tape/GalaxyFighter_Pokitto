@@ -13,12 +13,12 @@ class Game {
     PlayGameState playGameState;
     HighScoreState highScoreState;
     
-    GameCookie cookie;
+    GameCookie *cookie;
     GameStateType currentState;
 
   public:
 
-    void setup(GameCookie &cookie);
+    void setup(GameCookie *cookie);
     void loop(void);
 
 };

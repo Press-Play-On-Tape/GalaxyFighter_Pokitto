@@ -30,7 +30,7 @@ void TitleScreenState::activate() {
 // ----------------------------------------------------------------------------
 //  Handle state updates .. 
 //
-GameStateType TitleScreenState::update(GameStateType currentState, GameCookie &cookie) {
+GameStateType TitleScreenState::update(GameStateType currentState, GameCookie *cookie) {
 
     this->updateStarField(1);
   
@@ -121,7 +121,7 @@ GameStateType TitleScreenState::update(GameStateType currentState, GameCookie &c
 
 	if (PC::buttons.pressed(BTN_B)) {
 
-        cookie.setLastScore(0);
+        cookie->setLastScore(0);
         currentState = GameStateType::HighScore_Activate; 
         
     }
@@ -134,7 +134,7 @@ GameStateType TitleScreenState::update(GameStateType currentState, GameCookie &c
 // ----------------------------------------------------------------------------
 //  Render the state .. 
 //
-void TitleScreenState::render(GameCookie &cookie) {
+void TitleScreenState::render(GameCookie *cookie) {
 
     PD::clear();
 
@@ -206,14 +206,14 @@ void TitleScreenState::render(GameCookie &cookie) {
 
                 case 29 ... 31:
                     PD::setColor(6);
-                    this->printChar(cookie.initials[0][i - 29]);
+                    this->printChar(cookie->initials[0][i - 29]);
                     break;
 
                 case 33 ... 40:
                     {
                         PD::setColor(8);
                         uint8_t digits[8] = {};
-                        Utils::extractDigits(digits, cookie.score[0]);
+                        Utils::extractDigits(digits, cookie->score[0]);
                         this->printNumber(digits[40 - i]);
                     }
                     break;
@@ -222,14 +222,14 @@ void TitleScreenState::render(GameCookie &cookie) {
 
                 case 42 ... 44:
                     PD::setColor(6);
-                    this->printChar(cookie.initials[1][i - 42]);
+                    this->printChar(cookie->initials[1][i - 42]);
                     break;
 
                 case 46 ... 53:
                     {
                         PD::setColor(8);
                         uint8_t digits[8] = {};
-                        Utils::extractDigits(digits, cookie.score[1]);
+                        Utils::extractDigits(digits, cookie->score[1]);
                         this->printNumber(digits[53 - i]);
                     }
                     break;
@@ -238,14 +238,14 @@ void TitleScreenState::render(GameCookie &cookie) {
 
                 case 55 ... 57:
                     PD::setColor(6);
-                    this->printChar(cookie.initials[2][i - 55]);
+                    this->printChar(cookie->initials[2][i - 55]);
                     break;
 
                 case 59 ... 66:
                     {
                         PD::setColor(8);
                         uint8_t digits[8] = {};
-                        Utils::extractDigits(digits, cookie.score[2]);
+                        Utils::extractDigits(digits, cookie->score[2]);
                         this->printNumber(digits[66 - i]);
                     }
                     break;
@@ -254,14 +254,14 @@ void TitleScreenState::render(GameCookie &cookie) {
 
                 case 68 ... 70:
                     PD::setColor(6);
-                    this->printChar(cookie.initials[3][i - 68]);
+                    this->printChar(cookie->initials[3][i - 68]);
                     break;
 
                 case 72 ... 79:
                     {
                         PD::setColor(8);
                         uint8_t digits[8] = {};
-                        Utils::extractDigits(digits, cookie.score[3]);
+                        Utils::extractDigits(digits, cookie->score[3]);
                         this->printNumber(digits[79 - i]);
                     }
                     break;
@@ -270,14 +270,14 @@ void TitleScreenState::render(GameCookie &cookie) {
 
                 case 81 ... 83:
                     PD::setColor(6);
-                    this->printChar(cookie.initials[4][i - 81]);
+                    this->printChar(cookie->initials[4][i - 81]);
                     break;
 
                 case 85 ... 92:
                     {
                         PD::setColor(8);
                         uint8_t digits[8] = {};
-                        Utils::extractDigits(digits, cookie.score[4]);
+                        Utils::extractDigits(digits, cookie->score[4]);
                         this->printNumber(digits[92 - i]);
                     }
                     break;                    

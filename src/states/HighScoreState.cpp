@@ -22,10 +22,10 @@ void HighScoreState::activate() {
 // ----------------------------------------------------------------------------
 //  Handle state updates .. 
 //
-GameStateType HighScoreState::update(GameStateType currentState, GameCookie &cookie) {
+GameStateType HighScoreState::update(GameStateType currentState, GameCookie *cookie) {
 	
     bool flash = Utils::getFrameCountHalf(48);
-    uint32_t index = cookie.getScoreIndex();
+    uint32_t index = cookie->getScoreIndex();
     
     
     // Update star field ..
@@ -48,26 +48,26 @@ GameStateType HighScoreState::update(GameStateType currentState, GameCookie &coo
 
         if (PC::buttons.pressed(BTN_UP) || PC::buttons.repeat(BTN_UP, 16)) {
 
-            uint32_t val = cookie.initials[index][this->cursor];
+            uint32_t val = cookie->initials[index][this->cursor];
             val++;
             if (val > 38) val = 0;
-            cookie.initials[index][this->cursor] = val;
+            cookie->initials[index][this->cursor] = val;
             
         }
 
         if (PC::buttons.pressed(BTN_DOWN) || PC::buttons.repeat(BTN_DOWN, 16)) {
 
-            uint32_t val = cookie.initials[index][this->cursor];
+            uint32_t val = cookie->initials[index][this->cursor];
             if (val == 0) val = 38;
             val--;
-            cookie.initials[index][this->cursor] = val;
+            cookie->initials[index][this->cursor] = val;
             
         }
 
-        if (PC::buttons.pressed(BTN_A) && cookie.initials[index][0] != 0 && cookie.initials[index][1] != 0 && cookie.initials[index][2] != 0) {
+        if (PC::buttons.pressed(BTN_A) && cookie->initials[index][0] != 0 && cookie->initials[index][1] != 0 && cookie->initials[index][2] != 0) {
 
-            cookie.saveCookie();
-            cookie.setLastScore(0);
+            cookie->saveCookie();
+            cookie->setLastScore(0);
             
         }
 
@@ -88,10 +88,10 @@ GameStateType HighScoreState::update(GameStateType currentState, GameCookie &coo
 // ----------------------------------------------------------------------------
 //  Render the state .. 
 //
-void HighScoreState::render(GameCookie &cookie) {
+void HighScoreState::render(GameCookie *cookie) {
 	
     bool flash = Utils::getFrameCountHalf(48);
-    uint32_t index = cookie.getScoreIndex();
+    uint32_t index = cookie->getScoreIndex();
 
     PD::clear();
     
@@ -129,7 +129,7 @@ void HighScoreState::render(GameCookie &cookie) {
         PD::drawBitmap(190, 65, Images::Char_S);
 
         uint8_t digits[8] = {};
-        Utils::extractDigits(digits, cookie.lastScore);
+        Utils::extractDigits(digits, cookie->lastScore);
 
 
         // Render Highlights ..
@@ -151,7 +151,7 @@ void HighScoreState::render(GameCookie &cookie) {
             
             if ((this->cursor == x && flash) || this->cursor != x) {
             
-                PD::drawBitmap(154 + (x * 10), 105 + (index * 12), Images::HS_Font[cookie.initials[index][x]]);
+                PD::drawBitmap(154 + (x * 10), 105 + (index * 12), Images::HS_Font[cookie->initials[index][x]]);
                 
             }
 
@@ -198,7 +198,7 @@ void HighScoreState::render(GameCookie &cookie) {
         //Score
 
         uint8_t digits[8] = {};
-        Utils::extractDigits(digits, cookie.score[y]);
+        Utils::extractDigits(digits, cookie->score[y]);
         
         if (index != y) {
 
@@ -210,7 +210,7 @@ void HighScoreState::render(GameCookie &cookie) {
 
             for (uint32_t x = 0; x < 3; x++) {
                 
-                PD::drawBitmap(154 + (x * 10), 105 + (y * 12), Images::HS_Font[cookie.initials[y][x]]);
+                PD::drawBitmap(154 + (x * 10), 105 + (y * 12), Images::HS_Font[cookie->initials[y][x]]);
 
             }
 
