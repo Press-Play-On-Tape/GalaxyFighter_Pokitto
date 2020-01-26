@@ -14072,6 +14072,12 @@
 		},
 		"/GalaxyFighters_POPandMusic.zip": {
 			"sdcard": false
+		},
+		"/GalaxyFighters_POPandMusic2.zip": {
+			"sdcard": false
+		},
+		"/GalaxyFighters.pop": {
+			"sdcard": false
 		}
 	}
 }
