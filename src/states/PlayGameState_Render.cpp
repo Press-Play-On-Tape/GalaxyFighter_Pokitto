@@ -717,11 +717,11 @@ void PlayGameState::renderStageDetails() {
             PD::setColor(0);
             PD::fillRect(49, 80, 93, 11);
 
-            PD::drawBitmap(76, 82, Images::Char_R);
-            PD::drawBitmap(86, 82, Images::Char_E);
-            PD::drawBitmap(96, 82, Images::Char_A);
-            PD::drawBitmap(106, 82, Images::Char_D);
-            PD::drawBitmap(116, 82, Images::Char_Y);
+            PD::drawBitmap(75, 84, Images::Char_R);
+            PD::drawBitmap(85, 84, Images::Char_E);
+            PD::drawBitmap(95, 84, Images::Char_A);
+            PD::drawBitmap(105, 84, Images::Char_D);
+            PD::drawBitmap(115, 84, Images::Char_Y);
 
             break;
 
@@ -730,18 +730,18 @@ void PlayGameState::renderStageDetails() {
             PD::setColor(0);
             PD::fillRect(49, 80, 93, 11);
 
-            PD::drawBitmap(51, 82, Images::Char_S);
-            PD::drawBitmap(61, 82, Images::Char_T);
-            PD::drawBitmap(71, 82, Images::Char_A);
-            PD::drawBitmap(81, 82, Images::Char_G);
-            PD::drawBitmap(91, 82, Images::Char_E);
+            PD::drawBitmap(55, 82, Images::Char_S);
+            PD::drawBitmap(65, 82, Images::Char_T);
+            PD::drawBitmap(75, 82, Images::Char_A);
+            PD::drawBitmap(85, 82, Images::Char_G);
+            PD::drawBitmap(95, 82, Images::Char_E);
             
             uint8_t digits[3] = {};
             Utils::extractDigits(digits, this->level + 1);
         
             for (uint8_t j = 3; j > 0; --j) {
         
-                PD::drawBitmap(143 - (j * 10), 82, Images::StageNumbers[digits[j - 1]]);
+                PD::drawBitmap(147 - (j * 10), 82, Images::StageNumbers[digits[j - 1]]);
         
             }
 
@@ -766,15 +766,15 @@ void PlayGameState::renderChallengeStageDetails() {
         PD::setColor(0);
         PD::fillRect(50, 50, 92, 11);
 
-        PD::drawBitmap(52, 52, Images::Char_C);
-        PD::drawBitmap(62, 52, Images::Char_H);
-        PD::drawBitmap(72, 52, Images::Char_A);
-        PD::drawBitmap(82, 52, Images::Char_L);
-        PD::drawBitmap(92, 52, Images::Char_L);
-        PD::drawBitmap(102, 52, Images::Char_E);
-        PD::drawBitmap(112, 52, Images::Char_N);
-        PD::drawBitmap(122, 52, Images::Char_G);
-        PD::drawBitmap(132, 52, Images::Char_E);
+        PD::drawBitmap(56, 52, Images::Char_C);
+        PD::drawBitmap(66, 52, Images::Char_H);
+        PD::drawBitmap(76, 52, Images::Char_A);
+        PD::drawBitmap(86, 52, Images::Char_L);
+        PD::drawBitmap(96, 52, Images::Char_L);
+        PD::drawBitmap(106, 52, Images::Char_E);
+        PD::drawBitmap(116, 52, Images::Char_N);
+        PD::drawBitmap(126, 52, Images::Char_G);
+        PD::drawBitmap(136, 52, Images::Char_E);
 
         this->renderStageDetails();
 
