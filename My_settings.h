@@ -1,8 +1,5 @@
 #pragma once
 
-#define PROJ_BUTTONS_POLLING_ONLY
-
-
 //#define PROJ_SHOW_FPS_COUNTER
 
 #define PROJ_BUTTONS_POLLING_ONLY

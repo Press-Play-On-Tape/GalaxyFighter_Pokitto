@@ -14102,6 +14102,63 @@
 		},
 		"/music/galaxyA0.raw": {
 			"sdcard": false
+		},
+		"\\GalaxyFighters.pop": {
+			"sdcard": false
+		},
+		"\\GalaxyFighters_POPandMusic.zip": {
+			"sdcard": false
+		},
+		"\\Banner and Icons\\Screenshots_01.h": {
+			"sdcard": false
+		},
+		"\\Banner and Icons\\Screenshots_01.png": {
+			"sdcard": false
+		},
+		"\\Banner and Icons\\Screenshots_02.h": {
+			"sdcard": false
+		},
+		"\\Banner and Icons\\Screenshots_02.png": {
+			"sdcard": false
+		},
+		"\\Banner and Icons\\Screenshots_03.h": {
+			"sdcard": false
+		},
+		"\\Banner and Icons\\Screenshots_03.png": {
+			"sdcard": false
+		},
+		"\\Banner and Icons\\Screenshots_04.h": {
+			"sdcard": false
+		},
+		"\\Banner and Icons\\Screenshots_04.png": {
+			"sdcard": false
+		},
+		"\\Banner and Icons\\Screenshots_05.h": {
+			"sdcard": false
+		},
+		"\\Banner and Icons\\Screenshots_05.png": {
+			"sdcard": false
+		},
+		"\\Banner and Icons\\Screenshots_06.h": {
+			"sdcard": false
+		},
+		"\\Banner and Icons\\Screenshots_06.png": {
+			"sdcard": false
+		},
+		"\\Banner and Icons\\Screenshots_07.h": {
+			"sdcard": false
+		},
+		"\\Banner and Icons\\Screenshots_07.png": {
+			"sdcard": false
+		},
+		"\\GalaxyFighter_Pokitto.pop": {
+			"sdcard": false
+		},
+		"\\GalaxyFighters.zip": {
+			"sdcard": false
+		},
+		"\\GalaxyFighters.zip~RF1e65c05b.TMP": {
+			"sdcard": false
 		}
 	}
 }
