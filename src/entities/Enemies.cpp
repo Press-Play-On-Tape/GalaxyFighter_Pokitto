@@ -6,19 +6,17 @@
 #include "../utils/Utils.h"
 #include "../data/Sequences.h"
 
-Enemies::Enemies() { 
-}
+Enemies::Enemies() { }
 
 void Enemies::reset() {
     
     for (uint32_t x = 0; x < ENEMY_COUNT; x++) {
 
         Enemy &enemy = this->enemies[x]; 
-        enemy.setEnabled(false);
+        enemy.reset();
 
     }
-
-    
+   
 }
 
 const float pulseOffsetX[] = { 0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75 };

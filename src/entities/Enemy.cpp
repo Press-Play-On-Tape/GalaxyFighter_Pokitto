@@ -8,6 +8,41 @@
 
 Enemy::Enemy() { }
 
+void Enemy::reset() {
+
+    this->x = 0;
+    this->y = 0;
+    this->x_Formation = 0;
+    this->y_Formation = 0;
+    this->x_Orig = 0;
+    this->y_Orig = 0;
+    this->xDelta = 0;
+    
+    this->gridPosition = -1;           
+    this->enemyType = EnemyType::Butterfly;       
+    this->sequenceCounter = 0;
+    this->imageIndex = 0;
+    this->repeat = 0;
+    this->health = 0;
+    
+    this->enabled = false;   
+    this->visible = false;
+    this->moveToGrid = false;     
+    this->rotateToUpright = false;
+    this->rotateFactor = 0;    
+    this->flipHorizontal = false;  
+    this->explosionCounter = 0;   
+    this->wrapHorizontally = false;
+    this->poofIndex = 0;
+    this->enemyHasBeenCaptured = false;
+    this->wasInSequence = false;
+
+    this->tractorEnabled = false;
+    this->tractor = 0;
+    this->tractorHighlight = 0;
+    
+}
+
 float Enemy::getX() {
     
     return this->x;

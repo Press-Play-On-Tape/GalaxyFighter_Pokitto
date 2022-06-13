@@ -76,6 +76,7 @@ class Enemy {
         uint32_t getHeight();
         uint32_t getScore();
         bool inSequenceBeforeDeath();
+        void reset();
         
         // Kill the enemy !
         
